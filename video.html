@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <title>GF DAY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .video-container {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="myVideo" controls>
+            <source src="img/video.mp4" type="video/mp4">
+            Browser Anda tidak mendukung pemutar video HTML5.
+        </video>
+    </div>
+
+    <script>
+        // Ambil elemen video
+        var video = document.getElementById('myVideo');
+        
+        // Fungsi untuk memulai video
+        function playVideo() {
+            video.play();
+        }
+
+        // Fungsi untuk menghentikan video
+        function pauseVideo() {
+            video.pause();
+        }
+
+        // Fungsi untuk mengatur waktu video ke awal
+        function restartVideo() {
+            video.currentTime = 0;
+            video.play();
+        }
+    </script>
+</body>
+</html>
